@@ -11,10 +11,10 @@ def returnSum(myDict, foros):
     for i in myDict: 
         #print (myDict[i])
         sum = sum + float(myDict[i])
-    return sum *((100-foros)/100)
+    return sum *((100+foros)/100)
 
 # Driver Function 
-#dict = {'a': 100, 'b':200, 'c':300} 
+duck = {'a': 100, 'b':200, 'c':300,'eliza':0.15} 
 
 
 reader = csv.reader(open('mock_data_dict.csv', 'r'))
@@ -27,4 +27,4 @@ for row in reader:
 #   print (i, mydict[i])
 
 
-print("Sum :", returnSum(mydict,24)) 
+print("Sum :", returnSum(duck,24)) 
