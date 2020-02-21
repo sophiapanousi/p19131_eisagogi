@@ -14,7 +14,7 @@ def GetUserDate():
             d = datetime.strptime(userIn, "%d/%m/%Y")
             isValid=True            
         except:
-            print ("Που είσαι τέρμα ηλ; \n")
+            print ("ΔΕΝ ΥΠΑΡΧΕΙ Η ΗΜΕΡΟΜΗΝΙΑ ΑΥΤΗ!!!!; \n")
     return d
 
 def convert_timedelta(duration):
@@ -40,5 +40,5 @@ print(td)
 days, hours, minutes, seconds = convert_timedelta(td)
 #days, hours, minutes, seconds = seconds_to_dhms(td.seconds)
 print ('Έχουν μεσολαβήσει {} ημέρες, {} ώρες, {} λεπτά, {} δευτερόλεπτα'.format(days, minutes, hours,seconds))
-print("από την τελευταία φορά που έκανα σεξ.")
+
 
