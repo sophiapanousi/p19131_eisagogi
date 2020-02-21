@@ -14,7 +14,7 @@ def GetUserDate():
             d = datetime.strptime(userIn, "%d/%m/%Y")
             isValid=True            
         except:
-            print ("Που είσαι τέρμα ηλίθιος το προσπαθείς καθημερινά; \n")
+            print ("Που είσαι τέρμα ηλ; \n")
     return d
 
 def convert_timedelta(duration):

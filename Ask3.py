@@ -4,10 +4,8 @@
 # Άσκηση 3,8,9,12
 # list of numbers 
 import csv
-#kjhkjhkjkjkjhjh
- 
-#####
-# Function to print sum 
+
+ # Function to print sum 
 def returnSum(myDict, foros): 
     sum = 0
     for i in myDict: 
