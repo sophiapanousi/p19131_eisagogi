@@ -14,8 +14,8 @@ def returnSum(myDict, foros):
     return sum *((100+foros)/100)
 
 # Driver Function 
-duck = {'a': 100, 'b':200, 'c':300,'eliza':0.15} 
-
+duck = {'a': 100, 'b':200, 'c':300,'eliza':0.00025} 
+#Eliza is my sister
 
 reader = csv.reader(open('mock_data_dict.csv', 'r'))
 mydict = {}
