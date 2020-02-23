@@ -4,8 +4,12 @@
 # ημερομηνία που παίρνετε σαν είσοδο από τον χρήστη είναι η ίδια με αυτήν του συστήματος,
 # άρα δεν χρειάζεται ο χρήστης να δηλώσει την ώρα.
 
-
+#Εισαγωγή βιβλιοθηκών για διαχείριση χρόνου
 from datetime import datetime
+
+# Συνάρτηση για τον έλεγχο εγκυρότητας της επιθυμητής μορφής της ημερομηνίας.
+# Χρησιμοποιείται συνδιασμός της strptime με την επιθυμητή μορφή και της μεθόδου διαχείρισης 
+# λαθών try - except για να διαχειρίζεται τη λάθος εισαγωγή και να επαναλαμβάνει τη διαδικασία
 def GetUserDate():
     isValid=False
     while not isValid:
@@ -17,28 +21,30 @@ def GetUserDate():
             print ("ΔΕΝ ΥΠΑΡΧΕΙ Η ΗΜΕΡΟΜΗΝΙΑ ΑΥΤΗ!!!!; \n")
     return d
 
+
+# Συνάρτηση που δέχεται ένα αντικείμενο timedelta της κλάσης datetime της Python και
+# θα το αναλύει σε ημέρες και ώρες, λεπτά, δευτερόλεπτα κάνοντας τις αντίστοιχες διαιρέσεις
+# αξιοποιώντας το modulo και το ακέραιο πηλίκο
 def convert_timedelta(duration):
-    days, seconds = duration.days, duration.seconds
-    #print (days)
-    #print(seconds)
+    days, seconds = duration.days, duration.seconds    
     minutes = (seconds) // 3600
     hours = (seconds % 3600) // 60
     seconds = (seconds % 60)
     return days, hours, minutes, seconds
 
 
-
-
+#Εισαγωγή από το χρήστη της επιθυμητής ημερομηνίας
 user_date=GetUserDate()
+#Παίρνουμε την ημερομηνία του συστήματος
 cur_date = datetime.now()
+#Δείξε τις ημερομηνίες όπως τις αποθηκεύει η python
 print(user_date)
 print(cur_date)
-#print(abs((user_date - cur_date).days))
+#Υπολόγισε τη διαφορά
 td=abs(user_date - cur_date)
 print(td)
-#td = datetime.timedelta(2, 7743, 12345)
+#Κάνε χρήση της συνάρτησης που φτιάξαμε και εμφάνισέ τα κάνοντας χρήση της συνάρτησης format()
 days, hours, minutes, seconds = convert_timedelta(td)
-#days, hours, minutes, seconds = seconds_to_dhms(td.seconds)
 print ('Έχουν μεσολαβήσει {} ημέρες, {} ώρες, {} λεπτά, {} δευτερόλεπτα'.format(days, minutes, hours,seconds))
 
 
