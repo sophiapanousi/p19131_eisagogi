@@ -10,7 +10,7 @@
 
 import random
 #random.random()
-
+#Για debugging των αποτελεσμάτων
 #random.seed(667)
 
 #Αρχικοποίηση των φαναριών με τυχαίες τιμές αυτοκινήτων
