@@ -11,7 +11,7 @@
 import random
 #random.random()
 
-random.seed(667)
+#random.seed(667)
 
 #Αρχικοποίηση των φαναριών με τυχαίες τιμές αυτοκινήτων
 fana = random.randint(0, 100)
